@@ -83,6 +83,7 @@
 5. 双向绑定验证
 
 >组件传递的属性命名是以驼峰命名（camelCase）在html属性中需要转化为中横线
+
 ```javascript
 	Vue.component('ajax-button', {
 		props : ['loadingText']
@@ -179,6 +180,7 @@ Vue 实例实现了一个自定义事件接口，用于在组件树中通信。�
 
 ###异步组件
 >在大型应用中，我们可能需要将应用拆分为小块，只在需要时才从服务器下载。为了让事情更简单，Vue.js 允许将组件定义为一个工厂函数，动态地解析组件的定义。Vue.js 只在组件需要渲染时触发工厂函数，并且把结果缓存起来，用于后面的再次渲染。例如：
+
 ```javascript
 	Vue.component('async-example', function (resolve, reject) { //Promise
 	  setTimeout(function () {
